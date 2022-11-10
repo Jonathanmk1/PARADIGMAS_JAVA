@@ -1,6 +1,6 @@
-package d10252022;
+package Empleado;
 
-public class Empleado {
+public abstract class Empleado extends Object implements CuentasPorPagar {
 
     protected int id;
     protected String nombre;

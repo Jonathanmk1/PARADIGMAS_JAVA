@@ -1,8 +1,6 @@
 
 package Empleado;
 
-import d10252022.Empleado;
-
 public class EmpleadoPorHora extends Empleado{
     
     private int ht;
@@ -30,12 +28,12 @@ public class EmpleadoPorHora extends Empleado{
         this.pg = pg;
     }
     
-    public float pago(){
+    public float montoApagar(){
         return ht * pg;
     }
      @Override
     public String toString(){
-        return String.format("%s %-5d %-10.2f %-10.2f",super.toString(), ht, pg, pago());
+        return String.format("%s %-5d %-10.2f %-10.2f",super.toString(), ht, pg, montoApagar());
     }
     
 }

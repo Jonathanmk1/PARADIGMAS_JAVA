@@ -1,8 +1,6 @@
 
 package Empleado;
 
-import d10252022.Empleado;
-
 public class EmpleadoPorComision extends Empleado{
 
     protected float ventastotal;
@@ -30,11 +28,14 @@ public class EmpleadoPorComision extends Empleado{
     public void setTarifasporcomision(float tarifasporcomision) {
         this.tarifasporcomision = tarifasporcomision;
     }
-    public float sueldo(){
-        return ventastotal * tarifasporcomision / 100;
-    }
+    
     @Override
     public String toString(){
-        return String.format("%s %-10.2f %-10.2f ",super.toString(), ventastotal,tarifasporcomision);
+        return String.format("%s %-10.2f %-10.2f %-10.2f ",super.toString(), ventastotal,tarifasporcomision, montoApagar());
+    }
+
+    @Override
+    public float montoApagar() {
+       return ventastotal * tarifasporcomision / 100;
     }
 }

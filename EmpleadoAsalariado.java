@@ -1,8 +1,6 @@
 
 package Empleado;
 
-import d10252022.Empleado;
-
 public class EmpleadoAsalariado extends Empleado{
     private float salario;
 
@@ -14,12 +12,15 @@ public class EmpleadoAsalariado extends Empleado{
     public void setSalario(float salario) {
         this.salario = salario;
     }
-    public float sueldo(){
-        return salario;
-    }
+ 
     @Override
     public String toString(){
-        return String.format("%s %-10.2f",super.toString(), salario);
+        return String.format("%s %-10.2f",super.toString(), montoApagar());
+    }
+
+    @Override
+    public float montoApagar() {
+       return salario;
     }
     
 }
